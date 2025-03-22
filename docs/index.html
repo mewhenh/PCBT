@@ -7,37 +7,41 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <div id="app">
-    <div class="sidebar">
-      <div id="sidebar-content">
-        <div class="input-container" id="X-axis">
-          <label for="xInput">X:</label>
-          <input type="number" id="xInput" name="xInput">
-        </div>
-        <div class="input-container" id="Y-axis">
-          <label for="yInput">Y:</label>
-          <input type="number" id="yInput" name="yInput">
-        </div>
-        <div class="input-container" id="Angle">
-          <label for="angleInput">Angle:</label>
-          <input type="number" id="angleInput" name="angleInput">
-        </div>
-        <div class="offset-container">
-          <div class="offset-item">
-            <span class="offset-label">X Offset:</span>
-            <span class="offset-value" id="xOffset">0</span>
+  <div id="container">
+    <div id="app">
+      <div class="sidebar">
+        <div id="sidebar-content">
+          <div class="input-container" id="X-axis">
+            <label for="xInput">X:</label>
+            <input type="number" id="xInput" name="xInput">
           </div>
-          <div class="offset-item">
-            <span class="offset-label">Y Offset:</span>
-            <span class="offset-value" id="yOffset">0</span>
+          <div class="input-container" id="Y-axis">
+            <label for="yInput">Y:</label>
+            <input type="number" id="yInput" name="yInput">
+          </div>
+          <div class="input-container" id="Angle">
+            <label for="angleInput">Angle:</label>
+            <input type="number" id="angleInput" name="angleInput">
+          </div>
+          <div class="offset-container">
+            <div class="offset-item">
+              <span class="offset-label">X Offset:</span>
+              <span class="offset-value" id="xOffset">0</span>
+            </div>
+            <div class="offset-item">
+              <span class="offset-label">Y Offset:</span>
+              <span class="offset-value" id="yOffset">0</span>
+            </div>
           </div>
         </div>
       </div>
+      <div id="main">
+        <div id="trapezium-container"></div>
+      </div>
     </div>
-    <div id="main">
-      <!-- The container now scales with screen size -->
-      <div id="trapezium-container"></div>
-    </div>
+    <footer id="footer">
+      <p>Made by Lina @mewhenh</p>
+    </footer>
   </div>
   <script src="renderer.js"></script>
 </body>

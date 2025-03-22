@@ -1,20 +1,27 @@
+/* Base reset and background */
 body, html {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: Arial, sans-serif;
-  overflow: hidden;
   background-color: #3c3c3c;
 }
 
-/* Use Flexbox for overall layout */
-#app {
+/* Container for app and footer */
+#container {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* App area uses Flexbox for layout */
+#app {
+  flex: 1;
+  display: flex;
   background-color: #262626;
 }
 
-/* Sidebar now takes a percentage of the width with a minimum width */
+/* Sidebar styling */
 .sidebar {
   flex: 0 0 20%;
   min-width: 200px;
@@ -100,7 +107,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-family: 'Courier New', monospace;
 }
 
-/* Main container fills remaining space and centers content */
+/* Main container styling */
 #main {
   flex-grow: 1;
   display: flex;
@@ -110,7 +117,7 @@ input[type="number"]::-webkit-outer-spin-button {
   padding: 10px;
 }
 
-/* Trapezium container scales responsively and maintains a square aspect ratio */
+/* Responsive trapezium container with a square aspect ratio */
 #trapezium-container {
   width: 100%;
   max-width: 600px;
@@ -121,7 +128,7 @@ input[type="number"]::-webkit-outer-spin-button {
   position: relative;
 }
 
-/* The SVG fills its container */
+/* SVG fills its container */
 #trapezium-svg {
   width: 100%;
   height: 100%;
@@ -143,4 +150,13 @@ input[type="number"]::-webkit-outer-spin-button {
 .grid-line {
   stroke: #4a4a4a;
   stroke-width: 1;
+}
+
+/* Footer styling */
+#footer {
+  background-color: #262626;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 14px;
 }
