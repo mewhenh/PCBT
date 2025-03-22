@@ -1,141 +1,146 @@
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    background-color: #3c3c3c;
-  }
-  
-  /* Sidebar and main container styles */
-  #app {
-    display: flex;
-    height: 100vh;
-    background-color: #262626;
-  }
-  
-  .sidebar {
-    height: 100%;
-    width: 225px;
-    background: #3c3c3c;
-    padding-top: 20px;
-    box-sizing: border-box;
-  }
-  
-  #sidebar-content {
-    margin: 20px;
-    padding: 20px;
-    background-color: #333;
-    border-radius: 15px;
-  }
-  
-  .input-container {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    background-color: #262626;
-    padding: 10px;
-    border-radius: 15px;
-  }
-  
-  .input-container label {
-    margin-right: 10px;
-    font-size: 16px;
-    color: #e16666;
-  }
-  
-  .input-container input[type="number"] {
-    width: 60%;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #535353;
-    background-color: #565656;
-    border-radius: 10px;
-    transition: border-color 0.3s ease;
-    outline: none;
-    color: #ffffff;
-    font-family: 'Courier New', monospace;
-  }
-  
-  .input-container input[type="number"]:focus {
-    border-color: #e16666;
-    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
-  }
-  
-  /* Remove spinner for webkit browsers (Chrome, Safari, newer versions of Opera) */
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-  
-  .offset-container {
-    margin-top: 20px;
-    background-color: #262626;
-    padding: 10px;
-    border-radius: 15px;
-  }
-  
-  .offset-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .offset-label {
-    font-size: 16px;
-    color: #e16666;
-  }
-  
-  .offset-value {
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #565656;
-    padding: 5px 10px;
-    border-radius: 5px;
-    min-width: 50px;
-    text-align: right;
-    font-family: 'Courier New', monospace;
-  }
-  
-  #main {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #262626;
-    border-radius: 10px;
-  }
-  
-  #trapezium-container {
-    width: 400px;
-    height: 400px;
-    background-color: #3c3c3c;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  }
-  
-  #trapezium-svg {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .trapezium {
-    fill: #565656;
-    stroke: #e16666;
-    stroke-width: 2;
-  }
-  
-  .stick {
-    stroke: #e16666;
-    stroke-width: 2;
-    transform-origin: 150px 150px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .grid-line {
-    stroke: #4a4a4a;
-    stroke-width: 1;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background-color: #3c3c3c;
+}
+
+/* Use Flexbox for overall layout */
+#app {
+  display: flex;
+  height: 100vh;
+  background-color: #262626;
+}
+
+/* Sidebar now takes a percentage of the width with a minimum width */
+.sidebar {
+  flex: 0 0 20%;
+  min-width: 200px;
+  max-width: 250px;
+  background: #3c3c3c;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+
+#sidebar-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 15px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #262626;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.input-container label {
+  margin-right: 10px;
+  font-size: 16px;
+  color: #e16666;
+}
+
+.input-container input[type="number"] {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #535353;
+  background-color: #565656;
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+}
+
+.input-container input[type="number"]:focus {
+  border-color: #e16666;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.offset-container {
+  margin-top: 20px;
+  background-color: #262626;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.offset-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.offset-label {
+  font-size: 16px;
+  color: #e16666;
+}
+
+.offset-value {
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #565656;
+  padding: 5px 10px;
+  border-radius: 5px;
+  min-width: 50px;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+/* Main container fills remaining space and centers content */
+#main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+  padding: 10px;
+}
+
+/* Trapezium container scales responsively and maintains a square aspect ratio */
+#trapezium-container {
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1;
+  background-color: #3c3c3c;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* The SVG fills its container */
+#trapezium-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.trapezium {
+  fill: #565656;
+  stroke: #e16666;
+  stroke-width: 2;
+}
+
+.stick {
+  stroke: #e16666;
+  stroke-width: 2;
+  transform-origin: 150px 150px; /* based on the viewBox center */
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-line {
+  stroke: #4a4a4a;
+  stroke-width: 1;
+}
